@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+      <link rel="stylesheet" type="text/css" href="projet_javascript.css">
+      <script src="jquery-3.3.1.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="slider-wrap">
+              <div id="slider" class="slider">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <i id="prev" class="material-icons btn">&#xE5CB;</i>
+              <i id="next" class="material-icons btn">&#xE5CC;</i>
+            </div>
+          </div>
+
+          <table id="map_and_form">
+              <tr>
+                  <td>
+                        <div id="googleMap"></div>
+                  </td>
+                  <td id="form_reservation">
+                        <form>
+                            <h1>Détails de la station</h1>
+                            <p id="adresse_station">Adresse...</p>
+                            <p id="places_station_max">0 place(s)</p>
+                            <p id="places_station_restantes">0 vélo(s) disponible(s)</p>
+                            <p>
+                                <label for="nom">Nom</label> :
+                                <input type="text" name="nom" id="nom" required>
+                            </p>
+                            <p>
+                                <label for="prenom">Prénom</label> :
+                                <input type="text" name="prenom" id="prenom" required>
+                            </p>
+
+                            <canvas id="canvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                    
+                            <input id="bouton_reserver" type="button" value="Réserver">
+
+                            <p id="time_limit"></p>
+                            
+                            
+                        </form>
+                  </td>
+              </tr>
+          </table>
+          
+          <script src="timer.js"></script>
+          <script src="projet_javascript.js"></script>
+          <script src="projet_js_map.js"></script>
+          <script src="projet_js_submit.js"></script>
+          <script src="canvas.js"></script>
+          <script src="main.js"></script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlUqxcvG6n3gKiFp7fG3OCmG2iMJWy1JY&callback=initMap"></script>
+    </body>
+</html>
